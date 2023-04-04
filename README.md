@@ -23,8 +23,27 @@ tutorial][6].  The only changes I made are:
 
 ## Prerequistes
 
-### Docker
-Download and install docker from https://www.docker.com/products/docker-desktop/
+1. Download and install docker from https://www.docker.com/products/docker-desktop/
+2. Open the Terminal.app if you're on Mac or Linux, or PowerShell if you're
+   on Windows.
+3. Go to your usual working directory, e.g.:
+
+       cd ~/projects
+
+   or create one if you don't have it:
+
+         mkdir ~/projects
+         cd ~/projects
+
+3. Clone this repository:
+
+       git clone https://github.com/corkscrewey/soviet-tetris.git
+
+   This will create a `soviet-tetris` directory in your working directory.
+
+4. Go to the `soviet-tetris` directory:
+
+       cd soviet-tetris
 
 ## Quickstart (easy-run)
 
