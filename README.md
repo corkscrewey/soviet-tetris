@@ -73,7 +73,7 @@ Manual:
        docker compose up -d
 
    This will start the SimH simulating PDP-11, and expose the serial port on
-   localhost:2323.  It will wait for connection from the terminal.
+   `localhost:2323`.  It will wait for connection from the terminal.
 
    Precise build instructions are in Dockerfile, if you're of an inquisitive
    type.
