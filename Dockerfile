@@ -8,8 +8,8 @@ RUN curl -LO https://github.com/simh/simh/archive/refs/tags/v3.9-0.tar.gz \
 RUN cd simh-3.9-0 && make BIN/pdp11 
 
 # get the disk images from github "files" release
-RUN curl -LO https://github.com/corkscrewey/tetris-original/releases/download/files/rl0.dsk \
-	&& curl -LO https://github.com/corkscrewey/tetris-original/releases/download/files/games.dsk
+RUN curl -LO https://github.com/corkscrewey/soviet-tetris/releases/download/files/disks.zip \
+	&& unzip disks.zip
 
 FROM alpine:3.17
 
