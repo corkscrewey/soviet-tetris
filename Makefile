@@ -1,5 +1,9 @@
 SHELL=/bin/sh
 
+ifndef MAME
+MAME=./mame/mame
+endif
+
 run: simh mame
 .PHONY: run
 
@@ -8,7 +12,7 @@ simh:
 .PHONY: simh
 
 mame:
-	./mame/mame ie15 -rompath files/rom -window -rs232 null_modem -bitb socket.localhost:2323
+	$(MAME) ie15 -rompath files/rom -window -rs232 null_modem -bitb socket.localhost:2323
 .PHONY: mame
 
 build:

@@ -1,5 +1,7 @@
 # Run Original Tetris by Alexey Pajitnov on your Computer
 
+<img src="files/scrshot.webp" width="400" />
+
 In light of the latest movie [about the history of Tetris][4], I decided to
 try and play the original version of the game.  I was surprised to find that
 it was not available on any of the major platforms.  I was able to find a
