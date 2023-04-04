@@ -20,6 +20,12 @@ tutorial][6].  The only changes I made are:
 +--------------------------------+  +-------------+       Л
           (backend)                   (frontend)        (you)
 ```
+
+## Prerequistes
+
+### Docker
+Download and install docker from https://www.docker.com/products/docker-desktop/
+
 ## Quickstart (easy-run)
 
 WIP
