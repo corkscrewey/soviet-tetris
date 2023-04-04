@@ -94,7 +94,8 @@ Manual:
    And press Enter.
 
    The terminal has a non-standard keymap, so to type the colon, ":" you need
-   to press `[']` key (on US keyboard, it's next to Shift).
+   to press `[']` key (on US keyboard, it's to the left of Enter or Return
+   key).
 
 There are some other games on the DL1: disk, to view them all, type:
 
