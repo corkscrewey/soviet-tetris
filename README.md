@@ -57,8 +57,13 @@ Ensure that you're in the same directory as the `docker-compose.yml` file.
 
     docker compose build
 
+This will build the docker image that will run the PDP-11 simulator.
 
 ### Install MAME
+
+MAME is a multi-platform emulator that can emulate a wide variety of
+computers, consoles, and arcade machines.  It is available for Linux, Mac,
+and Windows.  We will use it to emulate the 15ИЭ-00-013 terminal.
 
 #### Linux
 1. If you're on Ubuntu, you can do this with:
@@ -106,15 +111,19 @@ Manual:
    localhost:2323.  The `-window` option will start the emulator in a
    separate window.
 
-3. At the prompt (which looks like a "."), type:
+   On windows, you may need to include the full path to the mame executable, or
+   add it to your PATH environment variable.
+
+3. Once MAME connects, you will see a welcome message, and a prompt, which
+   looks like a dot ".".  Now type:
 
          RUN DL1:TETRIS
 
    And press Enter.
 
-   The terminal has a non-standard keymap, so to type the colon, ":" you need
-   to press `[']` key (on US keyboard, it's to the left of Enter or Return
-   key).
+   The terminal has a non-standard keymap, so to type the colon character ":",
+   you need to press `[']` key (on US keyboard, it's to the left of Enter or
+   Return key).
 
 There are some other games on the DL1: disk, to view them all, type:
 
