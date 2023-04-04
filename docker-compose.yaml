@@ -1,0 +1,8 @@
+version: "3.9"
+
+services:
+  simh:
+    build:
+      context: .
+    ports:
+        - "2323:2323"

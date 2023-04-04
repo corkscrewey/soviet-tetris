@@ -1,0 +1,7 @@
+cfg/
+files/disks/
+files/mame/
+*~
+*.swp
+.gitconfig
+.DS_Store
