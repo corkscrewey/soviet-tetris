@@ -5,3 +5,4 @@ files/mame/
 *.swp
 .gitconfig
 .DS_Store
+workdir

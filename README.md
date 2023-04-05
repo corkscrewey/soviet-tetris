@@ -25,7 +25,7 @@ tutorial][6].  The only changes I made are:
 
 ## Prerequistes
 
-1. Download and install docker from https://www.docker.com/products/docker-desktop/
+1. Download and install docker from [Official docker website][9]
 2. Open the Terminal.app if you're on Mac or Linux, or PowerShell if you're
    on Windows.
 3. Go to your usual working directory, e.g.:
@@ -79,8 +79,9 @@ and Windows.  We will use it to emulate the 15ИЭ-00-013 terminal.
    later)
 2. Unpack SDL to `/Library/Frameworks`
 3. Get the latest MAME:
-   - **Intel:** Get the latest [mame][1] (discovered though comments on [this][2] page)
-   - **Apple Silicon:** Get the latest [mame][8]
+   - **Intel:** Get the latest [Mame for Intel][1] (discovered though comments
+     on [this][2] page)
+   - **Apple Silicon:** Get the latest [MAME for apple silicon][8]
 4. Unpack the zip file to ./mame
 
 #### Windows
@@ -154,3 +155,4 @@ as per original instructions.
 [6]: http://bamf2048.github.io/sdl_mame_tut/
 [7]: https://github.com/mamedev/mame/releases/download/mame0253/mame0253b_64bit.exe
 [8]: https://sdlmame.lngn.net/stable/mame0252-arm64.zip
+[9]: https://www.docker.com/products/docker-desktop/

@@ -25,7 +25,7 @@ func NewFromPath() (*Docker, error) {
 	}
 	s, err := exec.LookPath(exe)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("docker executable not found, make sure it's installed: %w", err)
 	}
 	version, err := dockerver(s)
 	if err != nil {
