@@ -33,7 +33,6 @@ func (m *MAME) Run() error {
 	cmd := exec.Command(m.exe,
 		"-rompath", m.romDir,
 		"-window",
-		"-resolution", "640x480",
 		"-video", "opengl",
 		"ie15",
 		"-rs232", "null_modem", "-bitb", "socket.localhost:2323",
