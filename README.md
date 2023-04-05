@@ -149,7 +149,7 @@ as per original instructions.
 [1]: https://www.mediafire.com/file/zbo90w4rvfey9gb/mame_252.zip/file
 [2]: https://sdlmame.lngn.net/2023/02/23/mame-0-252-released/
 [3]: https://github.com/libsdl-org/SDL/releases/
-[4]: https://www.imdb.com/title/tt10100484/
+[4]: https://tv.apple.com/us/movie/tetris/umc.cmc.4evmgcam356pzgxs2l7a18d7b
 [5]: https://lab.dyne.org/OriginalTetrisHowto
 [6]: http://bamf2048.github.io/sdl_mame_tut/
 [7]: https://github.com/mamedev/mame/releases/download/mame0253/mame0253b_64bit.exe
