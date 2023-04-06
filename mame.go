@@ -15,12 +15,12 @@ type MAME struct {
 
 func NewMAMEFromPath(workdir string, romDir string) (*MAME, error) {
 	exe := mameExe()
-	localMameDir := filepath.Join(workdir, "bin")
+	localMameDir := filepath.Join(workdir, "mame")
 	localROMDir := filepath.Join(workdir, romDir)
 	exepath, err := exec.LookPath(exe)
 	if err != nil {
-		// not found in path, download and unpack.
-		exepath = filepath.Join(localMameDir, "mame")
+		// not found in PATH, download and unpack.
+		exepath = filepath.Join(localMameDir, mameExe())
 		if err := installMame(exepath); err != nil {
 			return nil, fmt.Errorf("error installing mame: %w", err)
 		}
@@ -44,11 +44,7 @@ func (m *MAME) Run() error {
 func mameExe() string {
 	exe := "mame"
 	if runtime.GOOS == "windows" {
-		if runtime.GOARCH == "amd64" {
-			exe = "mame64.exe"
-		} else {
-			exe = "mame.exe"
-		}
+		exe = "mame.exe"
 	}
 	return exe
 }
