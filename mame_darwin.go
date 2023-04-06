@@ -4,6 +4,7 @@ import (
 	"archive/zip"
 	"errors"
 	"io"
+	"log"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -11,6 +12,12 @@ import (
 )
 
 func installMame(mameExe string) error {
+	if fi, err := os.Stat(mameExe); err == nil {
+		if fi.Mode().IsRegular() && fi.Size() > 0 {
+			return nil
+		}
+	}
+
 	mameZIP := "https://github.com/corkscrewey/soviet-tetris/releases/download/files/mame_252.zip"
 	if runtime.GOARCH == "arm64" {
 		mameZIP = "https://github.com/corkscrewey/soviet-tetris/releases/download/files/mame0252-arm64.zip"
@@ -27,6 +34,7 @@ func installMame(mameExe string) error {
 	defer tmpf.Close()
 	defer os.Remove(tmpf.Name())
 
+	log.Printf("fetching mame from %s", mameZIP)
 	resp, err := http.Get(mameZIP)
 	if err != nil {
 		return err
@@ -48,7 +56,7 @@ func installMame(mameExe string) error {
 				return err
 			}
 			defer rc.Close()
-			f, err := os.Create(filepath.Join(mameExe, "mame"))
+			f, err := os.Create(mameExe)
 			if err != nil {
 				return err
 			}
@@ -63,11 +71,4 @@ func installMame(mameExe string) error {
 		}
 	}
 	return errors.New("mame binary not found in zip")
-}
-
-func mameExists(workdir string) bool {
-	if _, err := os.Stat(filepath.Join(workdir, mameExe())); err != nil {
-		return false
-	}
-	return true
 }

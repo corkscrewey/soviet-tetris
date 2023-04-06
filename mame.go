@@ -24,7 +24,6 @@ func NewMAMEFromPath(workdir string, romDir string) (*MAME, error) {
 		if err := installMame(exepath); err != nil {
 			return nil, fmt.Errorf("error installing mame: %w", err)
 		}
-		return nil, fmt.Errorf("mame executable not found, make sure it's installed: %w", err)
 	}
 	return &MAME{exe: exepath, romDir: localROMDir}, nil
 }
@@ -45,7 +44,11 @@ func (m *MAME) Run() error {
 func mameExe() string {
 	exe := "mame"
 	if runtime.GOOS == "windows" {
-		exe = "mame64.exe"
+		if runtime.GOARCH == "amd64" {
+			exe = "mame64.exe"
+		} else {
+			exe = "mame.exe"
+		}
 	}
 	return exe
 }
